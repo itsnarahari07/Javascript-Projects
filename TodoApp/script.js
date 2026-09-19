@@ -1,19 +1,15 @@
 let addtask = document.getElementById("addtask");
 let addbutton = document.getElementById("addbutton");
 
-addtask.addEventListener("keydown", function(e){
-
-    if(e.key === "Enter"){
-
+addbutton.addEventListener("click", function(){
         if(addtask.value.trim() === ""){
             return;
         }
         addTask();
-    }
     
 });
 
-function addTask(e) {
+function addTask() {
     
     let taskList = document.getElementById("tasklist");
     let task = document.createElement("li");
@@ -29,7 +25,13 @@ function addTask(e) {
 
     butt.addEventListener("click", function(){
     task.remove();
+
+    
 });
+
+task.addEventListener("click", function(){
+        task.classList.toggle("completed");
+    })
 }
 
 

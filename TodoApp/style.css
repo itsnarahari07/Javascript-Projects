@@ -45,5 +45,10 @@ button {
 
 li {
     margin: 10px;
-    
+
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
